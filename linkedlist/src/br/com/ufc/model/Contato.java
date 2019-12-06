@@ -49,5 +49,4 @@ public class Contato {
 	public LinkedList<Email> getEmails(){
 		return this.emails;
 	}
-
 }

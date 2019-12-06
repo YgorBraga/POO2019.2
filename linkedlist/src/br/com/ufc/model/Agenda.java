@@ -9,6 +9,10 @@ public class Agenda {
 		this.agenda = new LinkedList<Contato>();
 	}
 	
+	public LinkedList<Contato> getAgenda(){
+		return this.agenda;
+	}
+	
 	public boolean add(Contato contato) {
 		return this.agenda.add(contato);
 	}
@@ -17,8 +21,12 @@ public class Agenda {
 		return this.agenda.remove(contato);
 	}
 	
-	public LinkedList<Contato> getAgenda(){
-		return this.agenda;
-	}
-	
+	public boolean att(Contato oldContato, Contato newContato) {
+		int index = agenda.indexOf(oldContato);
+		if(index < 0) {
+			return false;
+		}
+		agenda.set(index, newContato);
+		return true;
+	}	
 }
