@@ -39,7 +39,7 @@ public class Application extends JFrame {
 	private JTextField email;
 	private JTextField delContato;
 
-	public static void main(String[] args) {
+	public void start() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
